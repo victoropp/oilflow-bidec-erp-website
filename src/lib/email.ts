@@ -2,7 +2,7 @@ import { Resend } from 'resend';
 import { siteConfig } from '@/config/site';
 import { DatabaseService } from './database';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 export interface DemoRequestData {
   firstName: string;
@@ -27,6 +27,11 @@ export class EmailService {
     demoRequestDbId?: string
   ) {
     try {
+      if (!resend) {
+        console.warn('Email service not configured. Skipping email send.');
+        return { success: true, data: null };
+      }
+
       const subject = 'Demo Request Confirmation - OilFlow BIDEC ERP';
       const htmlContent = this.generateCustomerConfirmationEmail(data, requestId);
 
@@ -73,6 +78,11 @@ export class EmailService {
     demoRequestDbId?: string
   ) {
     try {
+      if (!resend) {
+        console.warn('Email service not configured. Skipping email send.');
+        return { success: true, data: null };
+      }
+
       const subject = `New Demo Request from ${data.company} - ${data.firstName} ${data.lastName}`;
       const htmlContent = this.generateSalesNotificationEmail(data, requestId);
 
