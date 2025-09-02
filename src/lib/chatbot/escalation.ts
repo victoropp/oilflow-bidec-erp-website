@@ -385,7 +385,7 @@ export class EscalationService {
         duration,
         messageCount: conversationHistory.length,
         leadScore: 0, // Would be calculated from conversation
-        intents: [...new Set(intents)],
+        intents: Array.from(new Set(intents)),
         sentiment: 0 // Would be calculated
       },
       triggeredRules,
