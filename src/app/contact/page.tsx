@@ -14,11 +14,11 @@ const contactMethods = [
   {
     icon: Phone,
     title: 'Phone',
-    primary: '+233 30 123 4567',
-    secondary: '+233 24 567 8901',
+    primary: 'UK: +44 7442 852675',
+    secondary: 'Ghana: +233 248769377',
     description: 'Speak directly with our petroleum ERP specialists',
     action: 'Call Now',
-    href: 'tel:+233301234567'
+    href: 'tel:+447442852675'
   },
   {
     icon: Mail,
@@ -76,21 +76,21 @@ const salesTeam = [
     name: 'Kweku Mensah',
     role: 'Senior Sales Director',
     expertise: 'Large enterprise implementations',
-    phone: '+233 24 111 2222',
+    phone: '+44 7442 852675',
     email: 'kweku.mensah@oilflowbidec.com'
   },
   {
     name: 'Akua Darko',
     role: 'Solutions Consultant',
     expertise: 'Batch management & vessel operations',
-    phone: '+233 24 333 4444',
+    phone: '+233 248769377',
     email: 'akua.darko@oilflowbidec.com'
   },
   {
     name: 'Samuel Baidoo',
     role: 'Financial Systems Specialist',
     expertise: 'Banking integration & dual currency',
-    phone: '+233 24 555 6666',
+    phone: '+233 248769377',
     email: 'samuel.baidoo@oilflowbidec.com'
   }
 ];
@@ -304,7 +304,7 @@ export default function ContactPage() {
                   </div>
                   <div className="flex items-center">
                     <Phone className="h-5 w-5 text-primary-600 mr-2" />
-                    <p className="text-neutral-600">+233 30 123 4567</p>
+                    <p className="text-neutral-600">UK: +44 7442 852675 | Ghana: +233 248769377</p>
                   </div>
                   <div className="flex items-center">
                     <Mail className="h-5 w-5 text-primary-600 mr-2" />

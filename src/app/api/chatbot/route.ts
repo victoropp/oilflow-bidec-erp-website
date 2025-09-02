@@ -72,19 +72,19 @@ const knowledgeBase = {
       fr: "Nos capacités midstream incluent la surveillance des pipelines, l'optimisation du stockage, la logistique de transport et la gestion de la conformité réglementaire. Les entreprises constatent généralement 20% d'amélioration de l'efficacité logistique."
     },
     downstream: {
-      en: "For downstream operations, we offer refinery optimization, product quality management, distribution planning, and retail operations support. Our clients achieve 15% better margins on average.",
+      en: "For downstream operations, we offer refinery optimization, product quality management, distribution planning, and retail operations support. Our clients achieve significantly better margins.",
       fr: "Pour les opérations aval, nous offrons l'optimisation des raffineries, la gestion de la qualité des produits, la planification de distribution et le support des opérations de vente au détail. Nos clients obtiennent en moyenne 15% de meilleures marges."
     }
   },
 
   pricing: {
-    en: "Our pricing is based on your specific needs and company size. We offer flexible subscription models starting from enterprise packages. The ROI typically ranges from 300-500% within the first 18 months. Would you like me to connect you with our sales team for a customized quote?",
-    fr: "Notre tarification est basée sur vos besoins spécifiques et la taille de votre entreprise. Nous offrons des modèles d'abonnement flexibles commençant par des packages entreprise. Le ROI varie généralement de 300-500% dans les 18 premiers mois. Souhaitez-vous que je vous mette en contact avec notre équipe de vente pour un devis personnalisé ?"
+    en: "Our pricing is based on your specific needs and company size. We offer flexible subscription models starting from enterprise packages. Our clients typically see exceptional ROI with rapid payback periods. Would you like me to connect you with our sales team for a customized quote?",
+    fr: "Notre tarification est basée sur vos besoins spécifiques et la taille de votre entreprise. Nous offrons des modèles d'abonnement flexibles commençant par des packages entreprise. Nos clients obtiennent généralement un ROI exceptionnel avec des périodes de récupération rapides. Souhaitez-vous que je vous mette en contact avec notre équipe de vente pour un devis personnalisé ?"
   },
 
   integration: {
-    en: "OilFlow BIDEC ERP integrates seamlessly with major petroleum industry systems including SCADA, PI Systems, SAP, Oracle, and various IoT platforms. Our API-first architecture ensures smooth data flow across your entire tech stack.",
-    fr: "OilFlow BIDEC ERP s'intègre parfaitement avec les principaux systèmes de l'industrie pétrolière incluant SCADA, PI Systems, SAP, Oracle et diverses plateformes IoT. Notre architecture API-first assure un flux de données fluide dans toute votre pile technologique."
+    en: "OilFlow BIDEC ERP integrates seamlessly with major petroleum industry systems including SCADA, enterprise systems, and various IoT platforms. Our API-first architecture ensures smooth data flow across your entire tech stack.",
+    fr: "OilFlow BIDEC ERP s'intègre parfaitement avec les principaux systèmes de l'industrie pétrolière incluant SCADA, systèmes d'entreprise et diverses plateformes IoT. Notre architecture API-first assure un flux de données fluide dans toute votre pile technologique."
   },
 
   support: {

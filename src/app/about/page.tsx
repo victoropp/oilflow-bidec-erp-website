@@ -12,39 +12,39 @@ export const metadata: Metadata = {
 
 const teamMembers = [
   {
-    name: 'Kwame Asante',
+    name: 'Victor Collins Oppon',
     role: 'Chief Executive Officer',
-    background: '15+ years in petroleum industry operations and technology leadership',
-    education: 'MBA from GIMPA, BSc Engineering from Kwame Nkrumah University',
+    background: '15+ years in petroleum industry operations, Data Scientist and AI Expert',
+    education: 'MBA Finance, FCCA, BSc Administration (Accounting) from UGBS',
   },
   {
     name: 'Akosua Mensah',
     role: 'Chief Technology Officer',
-    background: '12+ years developing enterprise software solutions for African markets',
+    background: '8+ years developing enterprise software solutions for African markets',
     education: 'MSc Computer Science from University of Ghana',
   },
   {
     name: 'Samuel Osei',
     role: 'Head of Petroleum Solutions',
-    background: '20+ years in petroleum trading, operations, and regulatory compliance',
+    background: '15+ years in petroleum trading, operations, and regulatory compliance',
     education: 'Petroleum Engineering from University of Mines and Technology',
   },
   {
     name: 'Grace Adjei',
     role: 'Head of Financial Systems',
-    background: '18+ years in banking and financial technology across West Africa',
+    background: '12+ years in banking and financial technology across West Africa',
     education: 'Chartered Accountant (Ghana), MSc Finance from KNUST',
   }
 ];
 
 const milestones = [
-  { year: '2018', event: 'Company founded with focus on Ghana petroleum sector' },
-  { year: '2019', event: 'First major client implementation completed' },
-  { year: '2020', event: 'Expansion to cover 25+ petroleum companies' },
-  { year: '2021', event: 'Introduction of AI-powered analytics and forecasting' },
-  { year: '2022', event: 'Partnership with major Ghanaian banks for integrated solutions' },
-  { year: '2023', event: 'Achievement of 60% market share in Ghana petroleum ERP' },
-  { year: '2024', event: 'Launch of next-generation cloud-native platform' }
+  { year: '2023 Q1', event: 'Industry veterans unite with shared vision to revolutionize petroleum ERP' },
+  { year: '2023 Q3', event: 'Intensive R&D phase begins - analyzing gaps in existing ERP solutions' },
+  { year: '2023 Q4', event: 'Core architecture developed based on decades of operational experience' },
+  { year: '2024 Q1', event: 'Advanced features development: AI-powered analytics and forecasting modules' },
+  { year: '2024 Q2', event: 'Strategic partnerships established with major Ghanaian financial institutions' },
+  { year: '2024 Q3', event: 'Beta testing with select petroleum companies validates market approach' },
+  { year: '2024 Q4', event: 'Production-ready platform completed with industry-leading capabilities' }
 ];
 
 const values = [
@@ -78,12 +78,12 @@ export default function AboutPage() {
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl lg:text-6xl font-display font-bold text-neutral-900 mb-6">
-              Transforming Ghana's
-              <span className="text-primary-600"> Petroleum Industry</span>
+              Built by Industry Veterans.
+              <span className="text-primary-600"> Designed for Your Success.</span>
             </h1>
             <p className="text-xl text-neutral-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Since 2018, we've been at the forefront of petroleum technology innovation in Ghana, 
-              providing world-class ERP solutions that drive operational excellence and business growth.
+              After decades of experience in Ghana's petroleum sector, our team spent two years in intensive R&D 
+              building the ERP solution the industry actually needs - not what vendors think you need.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/request-demo">
@@ -109,24 +109,25 @@ export default function AboutPage() {
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-neutral-200">
               <h2 className="text-3xl font-display font-bold text-neutral-900 mb-6">Our Mission</h2>
               <p className="text-lg text-neutral-600 leading-relaxed mb-6">
-                To empower Ghana's petroleum industry with innovative, integrated ERP solutions that 
-                streamline operations, ensure regulatory compliance, and drive sustainable business growth.
+                To leverage our combined decades of BDC and petroleum industry expertise to deliver 
+                the ERP solution Ghana's energy sector has been waiting for - one built by insiders 
+                who understand the real operational challenges.
               </p>
               <p className="text-neutral-600">
-                We are committed to understanding the unique challenges of Ghana's petroleum sector 
-                and delivering technology solutions that address these challenges with precision and excellence.
+                Having worked within the industry's complexities for years, we recognized the gap between 
+                existing software and actual needs. Our mission is to bridge that gap with precision-engineered solutions.
               </p>
             </div>
             
-            <div className="bg-primary-600 rounded-2xl p-8 text-white">
-              <h2 className="text-3xl font-display font-bold mb-6">Our Vision</h2>
-              <p className="text-lg opacity-90 leading-relaxed mb-6">
-                To be the leading petroleum ERP solutions provider in West Africa, recognized for 
-                innovation, reliability, and deep industry expertise.
+            <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-2xl p-8 text-white shadow-xl">
+              <h2 className="text-3xl font-display font-bold mb-6 text-white">Our Vision</h2>
+              <p className="text-lg text-white leading-relaxed mb-6 font-medium">
+                To establish the new standard for petroleum ERP in West Africa - where technology 
+                finally matches the sophistication of industry veterans who built it.
               </p>
-              <p className="opacity-90">
-                We envision a future where every petroleum company in the region operates with 
-                maximum efficiency through our integrated technology solutions.
+              <p className="text-white">
+                By 2026, we envision every major petroleum company in Ghana choosing OilFlow BIDEC 
+                because our solutions reflect decades of hands-on industry knowledge, not theoretical assumptions.
               </p>
             </div>
           </div>
@@ -174,7 +175,8 @@ export default function AboutPage() {
               Leadership Team
             </h2>
             <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
-              Our experienced leadership team combines deep petroleum industry knowledge with cutting-edge technology expertise.
+              Meet the industry veterans who spent decades identifying what was missing in petroleum ERP systems, 
+              then took two years to engineer the solution Ghana's energy sector actually needs.
             </p>
           </div>
 
@@ -211,15 +213,16 @@ export default function AboutPage() {
               Our Journey
             </h2>
             <p className="text-lg text-neutral-300 max-w-3xl mx-auto">
-              From startup to market leader, here are the key milestones that have shaped our growth.
+              From industry insight to market-ready solution - the strategic milestones of our development journey, 
+              driven by decades of combined petroleum sector expertise.
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
               {milestones.map((milestone, index) => (
-                <div key={milestone.year} className="flex items-start">
-                  <div className="flex-shrink-0 w-20 text-right mr-8">
+                <div key={`${milestone.year}-${index}`} className="flex items-start">
+                  <div className="flex-shrink-0 w-24 text-right mr-8">
                     <span className="text-primary-400 font-bold text-lg">{milestone.year}</span>
                   </div>
                   <div className="flex-shrink-0 w-4 h-4 bg-primary-600 rounded-full mr-6 mt-1"></div>
@@ -241,30 +244,30 @@ export default function AboutPage() {
               Our Impact
             </h2>
             <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
-              Numbers that demonstrate our commitment to excellence and client success.
+              The strategic foundation behind our veteran-led approach to petroleum ERP development.
             </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="bg-white rounded-xl p-8 shadow-lg border border-neutral-200">
-              <div className="text-4xl font-bold text-primary-600 mb-2">50+</div>
-              <p className="text-neutral-600">Petroleum Companies</p>
-              <p className="text-sm text-neutral-500 mt-1">Across Ghana</p>
+              <div className="text-4xl font-bold text-primary-600 mb-2">40+</div>
+              <p className="text-neutral-600">Years Combined Experience</p>
+              <p className="text-sm text-neutral-500 mt-1">Leadership team expertise</p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-lg border border-neutral-200">
-              <div className="text-4xl font-bold text-primary-600 mb-2">60%</div>
-              <p className="text-neutral-600">Market Share</p>
-              <p className="text-sm text-neutral-500 mt-1">In petroleum ERP</p>
+              <div className="text-4xl font-bold text-primary-600 mb-2">2</div>
+              <p className="text-neutral-600">Years R&D</p>
+              <p className="text-sm text-neutral-500 mt-1">Intensive development phase</p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-lg border border-neutral-200">
-              <div className="text-4xl font-bold text-primary-600 mb-2">15M+</div>
-              <p className="text-neutral-600">Liters Managed</p>
-              <p className="text-sm text-neutral-500 mt-1">Daily on our platform</p>
+              <div className="text-4xl font-bold text-primary-600 mb-2">10+</div>
+              <p className="text-neutral-600">Beta Partners</p>
+              <p className="text-sm text-neutral-500 mt-1">Validating our approach</p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-lg border border-neutral-200">
-              <div className="text-4xl font-bold text-primary-600 mb-2">99.9%</div>
-              <p className="text-neutral-600">System Uptime</p>
-              <p className="text-sm text-neutral-500 mt-1">Ensuring continuity</p>
+              <div className="text-4xl font-bold text-primary-600 mb-2">2025</div>
+              <p className="text-neutral-600">Market Launch</p>
+              <p className="text-sm text-neutral-500 mt-1">Ready for deployment</p>
             </div>
           </div>
         </div>
@@ -278,8 +281,8 @@ export default function AboutPage() {
               Ready to Partner With Us?
             </h2>
             <p className="text-lg opacity-90 mb-8">
-              Join the growing number of petroleum companies in Ghana who trust OilFlow BIDEC 
-              to power their operations and drive their success.
+              Experience the difference when petroleum ERP is built by industry veterans who understand 
+              your operational challenges from years of hands-on experience, not theoretical assumptions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/request-demo">

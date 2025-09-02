@@ -23,10 +23,10 @@ interface ROIResults {
 }
 
 const defaultInputs: ROIInputs = {
-  annualRevenue: 50000000, // $50M
-  employees: 100,
-  currentEfficiency: 70, // 70%
-  operationalCosts: 10000000, // $10M
+  annualRevenue: 45000000, // $45M
+  employees: 85,
+  currentEfficiency: 72, // 72%
+  operationalCosts: 9000000, // $9M
 };
 
 export function ROICalculatorSection() {
@@ -45,9 +45,13 @@ export function ROICalculatorSection() {
     // Simulate calculation delay for better UX
     setTimeout(() => {
       // ROI calculation logic based on industry benchmarks
-      const efficiencyImprovement = 0.25; // 25% efficiency improvement
-      const costReductionRate = 0.15; // 15% cost reduction
-      const implementationCost = 500000; // $500K implementation cost
+      const baseEfficiency = 0.18;
+      const baseCostReduction = 0.12;
+      const baseImplementation = 0.012;
+      
+      const efficiencyImprovement = baseEfficiency + (inputs.currentEfficiency > 80 ? -0.03 : 0.02);
+      const costReductionRate = baseCostReduction + (inputs.employees > 200 ? 0.02 : 0);
+      const implementationCost = inputs.annualRevenue * baseImplementation;
       
       const costSavings = inputs.operationalCosts * costReductionRate;
       const efficiencyGains = inputs.annualRevenue * (efficiencyImprovement * (inputs.currentEfficiency / 100));
@@ -287,10 +291,10 @@ export function ROICalculatorSection() {
                 <div className="bg-neutral-50 rounded-xl p-6 border border-neutral-200">
                   <h4 className="font-semibold text-neutral-900 mb-3">Key Assumptions</h4>
                   <ul className="text-sm text-neutral-600 space-y-1">
-                    <li>• 25% operational efficiency improvement</li>
-                    <li>• 15% reduction in operational costs</li>
-                    <li>• Industry-standard implementation timeline</li>
-                    <li>• Based on petroleum industry benchmarks</li>
+                    <li>• Significant operational efficiency improvements</li>
+                    <li>• Substantial reduction in operational costs</li>
+                    <li>• Tailored implementation timeline</li>
+                    <li>• Based on industry best practices</li>
                   </ul>
                 </div>
               </>

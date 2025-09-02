@@ -3,22 +3,24 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Shield, LayoutDashboard } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 import { Logo } from '@/components/ui/logo';
 import { Button } from '@/components/ui/button';
 
 const navigation = [
+  { name: 'Home', href: '/' },
   {
     name: 'Solutions',
     href: '/solutions',
     submenu: [
-      { name: 'Batch Management', href: '/solutions/batch-management' },
-      { name: 'Vessel Operations', href: '/solutions/vessel-operations' },
-      { name: 'Daily Delivery', href: '/solutions/daily-delivery' },
-      { name: 'Price-Out System', href: '/solutions/price-out' },
+      { name: 'AI-Powered Insights', href: '/solutions/ai-insights' },
+      { name: 'Command Palette', href: '/solutions/command-palette' },
       { name: 'Ghana Banking', href: '/solutions/ghana-banking' },
+      { name: 'Dual Currency', href: '/solutions/dual-currency' },
       { name: 'IFRS Compliance', href: '/solutions/ifrs-compliance' },
+      { name: 'Financial Management', href: '/solutions/financial-management' },
+      { name: 'Analytics Suite', href: '/solutions/analytics' },
     ],
   },
   {
@@ -26,14 +28,17 @@ const navigation = [
     href: '/petroleum-trading',
     submenu: [
       { name: 'Batch Management', href: '/petroleum-trading/batch-management' },
-      { name: 'Depot Operations', href: '/petroleum-trading/depot-operations' },
+      { name: 'Price-Out System', href: '/solutions/price-out' },
       { name: 'Vessel Operations', href: '/petroleum-trading/vessel-operations' },
       { name: 'Daily Delivery', href: '/petroleum-trading/daily-delivery' },
+      { name: 'Depot Operations', href: '/petroleum-trading/depot-operations' },
+      { name: 'Sales Allocation', href: '/petroleum-trading/sales-allocation' },
     ],
   },
   { name: 'Pricing', href: '/pricing' },
   { name: 'Resources', href: '/resources' },
   { name: 'About', href: '/about' },
+  { name: 'Careers', href: '/careers' },
 ];
 
 export function Header() {
@@ -123,6 +128,19 @@ export function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
+            {/* Admin Portal Button - Always visible, requires credentials to access */}
+            <Link href="/admin/login">
+              <Button 
+                variant="outline" 
+                size="sm"
+                className="flex items-center gap-2 bg-gray-900 text-white border-gray-700 hover:bg-gray-800 hover:border-gray-600"
+                title="Admin Portal - Staff Access Only"
+              >
+                <Shield className="h-4 w-4" />
+                Admin Portal
+              </Button>
+            </Link>
+            
             <Link href="/contact">
               <Button variant="outline" size="sm">
                 Contact Sales
@@ -213,6 +231,17 @@ export function Header() {
 
                 {/* Mobile CTA Buttons */}
                 <div className="pt-4 px-4 space-y-2 border-t border-neutral-200">
+                  {/* Admin Portal Button for Mobile - Always visible, requires credentials */}
+                  <Link href="/admin/login" onClick={() => setIsOpen(false)}>
+                    <Button 
+                      className="w-full flex items-center justify-center gap-2 bg-gray-900 text-white hover:bg-gray-800"
+                      title="Admin Portal - Staff Access Only"
+                    >
+                      <Shield className="h-4 w-4" />
+                      Admin Portal
+                    </Button>
+                  </Link>
+                  
                   <Link href="/contact" onClick={() => setIsOpen(false)}>
                     <Button variant="outline" className="w-full">
                       Contact Sales

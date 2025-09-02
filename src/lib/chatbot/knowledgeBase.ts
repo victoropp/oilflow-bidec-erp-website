@@ -44,7 +44,7 @@ export const knowledgeBase: KnowledgeItem[] = [
     subcategory: 'overview',
     keywords: ['oilflow', 'bidec', 'erp', 'overview', 'about', 'what is', 'solution'],
     content: {
-      en: "OilFlow BIDEC ERP is a comprehensive enterprise resource planning solution specifically designed for the petroleum industry. We integrate upstream exploration, midstream logistics, and downstream operations into one powerful platform. Our solution helps companies increase operational efficiency by 25-40% while reducing costs and ensuring regulatory compliance across all petroleum operations.",
+      en: "OilFlow BIDEC ERP is a comprehensive enterprise resource planning solution specifically designed for the petroleum industry. We integrate upstream exploration, midstream logistics, and downstream operations into one powerful platform. Our solution helps companies significantly increase operational efficiency while reducing costs and ensuring regulatory compliance across all petroleum operations.",
       fr: "OilFlow BIDEC ERP est une solution complète de planification des ressources d'entreprise spécialement conçue pour l'industrie pétrolière. Nous intégrons l'exploration amont, la logistique midstream et les opérations aval en une plateforme puissante. Notre solution aide les entreprises à augmenter l'efficacité opérationnelle de 25-40% tout en réduisant les coûts et en assurant la conformité réglementaire."
     },
     followUpQuestions: {
@@ -62,7 +62,7 @@ export const knowledgeBase: KnowledgeItem[] = [
     subcategory: 'upstream',
     keywords: ['upstream', 'exploration', 'drilling', 'production', 'reservoir', 'field', 'wells'],
     content: {
-      en: "Our upstream solutions revolutionize exploration and production operations. We offer seismic data management, drilling optimization algorithms, production forecasting models, and reservoir simulation tools. Companies using our upstream module report 30% faster drilling times, 25% improved production efficiency, and 20% reduction in exploration costs. Our AI-powered analytics help identify optimal drilling locations and predict equipment maintenance needs.",
+      en: "Our upstream solutions revolutionize exploration and production operations. We offer seismic data management, advanced optimization tools, production forecasting models, and reservoir simulation capabilities. Companies using our upstream module report significantly faster drilling times, improved production efficiency, and substantial reduction in exploration costs. Our AI-powered analytics help identify optimal drilling locations and predict equipment maintenance needs.",
       fr: "Nos solutions amont révolutionnent les opérations d'exploration et de production. Nous offrons la gestion des données sismiques, les algorithmes d'optimisation de forage, les modèles de prévision de production et les outils de simulation de réservoir. Les entreprises utilisant notre module amont rapportent 30% de temps de forage plus rapides, 25% d'amélioration de l'efficacité de production et 20% de réduction des coûts d'exploration."
     },
     followUpQuestions: {
@@ -80,7 +80,7 @@ export const knowledgeBase: KnowledgeItem[] = [
     subcategory: 'midstream',
     keywords: ['midstream', 'pipeline', 'transportation', 'storage', 'logistics', 'distribution'],
     content: {
-      en: "Our midstream capabilities optimize the entire transportation and storage value chain. We provide real-time pipeline monitoring, automated storage optimization, route planning algorithms, and predictive maintenance for infrastructure. Clients achieve 22% improvement in logistics efficiency, 15% reduction in transportation costs, and 99.8% pipeline safety compliance. Our smart scheduling system maximizes throughput while minimizing operational risks.",
+      en: "Our midstream capabilities optimize the entire transportation and storage value chain. We provide real-time pipeline monitoring, automated storage optimization, intelligent route planning, and predictive maintenance for infrastructure. Clients achieve substantial improvements in logistics efficiency, significant reduction in transportation costs, and exceptional pipeline safety compliance. Our smart scheduling system maximizes throughput while minimizing operational risks.",
       fr: "Nos capacités midstream optimisent toute la chaîne de valeur de transport et de stockage. Nous fournissons la surveillance de pipeline en temps réel, l'optimisation automatisée du stockage, les algorithmes de planification d'itinéraires et la maintenance prédictive pour l'infrastructure. Les clients obtiennent 22% d'amélioration de l'efficacité logistique, 15% de réduction des coûts de transport et 99.8% de conformité de sécurité des pipelines."
     },
     followUpQuestions: {
@@ -98,7 +98,7 @@ export const knowledgeBase: KnowledgeItem[] = [
     subcategory: 'downstream',
     keywords: ['downstream', 'refinery', 'refining', 'retail', 'fuel', 'products', 'quality'],
     content: {
-      en: "Our downstream platform transforms refinery operations and retail management. We deliver advanced process optimization, product quality control, inventory management, and retail analytics. Refineries report 18% improvement in yield optimization, 12% reduction in quality incidents, and 25% better inventory turnover. Our demand forecasting helps predict market trends and optimize product mix for maximum profitability.",
+      en: "Our downstream platform transforms refinery operations and retail management. We deliver advanced process optimization, product quality control, inventory management, and retail analytics. Refineries report significant improvements in yield optimization, substantial reduction in quality incidents, and enhanced inventory turnover. Our demand forecasting helps predict market trends and optimize product mix for maximum profitability.",
       fr: "Notre plateforme aval transforme les opérations de raffinerie et la gestion du commerce de détail. Nous offrons l'optimisation avancée des processus, le contrôle de qualité des produits, la gestion des stocks et l'analyse du commerce de détail. Les raffineries rapportent 18% d'amélioration de l'optimisation du rendement, 12% de réduction des incidents de qualité et 25% de meilleur rotation des stocks."
     },
     followUpQuestions: {
@@ -115,8 +115,8 @@ export const knowledgeBase: KnowledgeItem[] = [
     category: 'pricing',
     keywords: ['price', 'cost', 'pricing', 'roi', 'investment', 'budget', 'expenses', 'value'],
     content: {
-      en: "Our pricing model is designed to deliver exceptional value with flexible options for companies of all sizes. We offer subscription-based licensing starting from enterprise packages, with pricing based on operational scale and module selection. Most clients see ROI within 12-18 months, with typical returns ranging from 300-500%. Our value proposition includes reduced operational costs, improved efficiency, and enhanced decision-making capabilities. I'd be happy to connect you with our sales team for a customized quote based on your specific needs.",
-      fr: "Notre modèle de tarification est conçu pour offrir une valeur exceptionnelle avec des options flexibles pour les entreprises de toutes tailles. Nous offrons des licences basées sur l'abonnement à partir de packages entreprise, avec des prix basés sur l'échelle opérationnelle et la sélection de modules. La plupart des clients voient un ROI dans les 12-18 mois, avec des retours typiques allant de 300-500%. Je serais ravi de vous mettre en contact avec notre équipe de vente pour un devis personnalisé."
+      en: "Our pricing model is designed to deliver exceptional value with flexible options for companies of all sizes. We offer subscription-based licensing with enterprise packages, and pricing based on operational scale and module selection. Most clients see rapid ROI with exceptional returns on investment. Our value proposition includes reduced operational costs, improved efficiency, and enhanced decision-making capabilities. I'd be happy to connect you with our sales team for a customized quote based on your specific needs.",
+      fr: "Notre modèle de tarification est conçu pour offrir une valeur exceptionnelle avec des options flexibles pour les entreprises de toutes tailles. Nous offrons des licences basées sur l'abonnement à partir de packages entreprise, avec des prix basés sur l'échelle opérationnelle et la sélection de modules. La plupart des clients obtiennent rapidement un ROI exceptionnel. Je serais ravi de vous mettre en contact avec notre équipe de vente pour un devis personnalisé."
     },
     followUpQuestions: {
       en: ['What factors affect pricing?', 'Can you show ROI calculations?', 'Do you offer free trials?', 'Schedule a pricing consultation'],
@@ -133,7 +133,7 @@ export const knowledgeBase: KnowledgeItem[] = [
     subcategory: 'integration',
     keywords: ['integration', 'api', 'connect', 'interface', 'compatibility', 'scada', 'sap', 'oracle'],
     content: {
-      en: "OilFlow BIDEC ERP features robust integration capabilities with an API-first architecture. We seamlessly connect with major petroleum industry systems including SCADA systems, PI Systems, SAP, Oracle, Wonderware, and various IoT platforms. Our REST APIs and real-time data connectors ensure smooth data flow across your entire technology ecosystem. We support over 200+ industry-standard protocols and formats, enabling rapid deployment without disrupting existing operations.",
+      en: "OilFlow BIDEC ERP features robust integration capabilities with an API-first architecture. We seamlessly connect with major petroleum industry systems including SCADA systems, enterprise resource planning platforms, manufacturing execution systems, and various IoT platforms. Our REST APIs and real-time data connectors ensure smooth data flow across your entire technology ecosystem. We support numerous industry-standard protocols and formats, enabling rapid deployment without disrupting existing operations.",
       fr: "OilFlow BIDEC ERP dispose de capacités d'intégration robustes avec une architecture API-first. Nous nous connectons parfaitement avec les principaux systèmes de l'industrie pétrolière incluant les systèmes SCADA, PI Systems, SAP, Oracle, Wonderware et diverses plateformes IoT. Nos API REST et connecteurs de données en temps réel assurent un flux de données fluide dans tout votre écosystème technologique."
     },
     followUpQuestions: {

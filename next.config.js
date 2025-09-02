@@ -4,14 +4,22 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 const nextConfig = {
-  // App Router configuration
-  experimental: {
-    appDir: true,
+  // Next.js 15 configuration
+  reactStrictMode: true,
+  
+  // Performance optimizations for Next.js 15
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn'],
+    } : false,
   },
   
-  // Performance optimizations
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+  // Enable experimental features
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '2mb',
+    },
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
   
   // Image optimization

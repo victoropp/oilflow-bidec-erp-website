@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, BarChart3, Database, DollarSign, Shield, Globe, Users } from 'lucide-react';
+import { ArrowRight, BarChart3, Database, DollarSign, Shield, Globe, Users, Brain, Command, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
@@ -58,10 +58,34 @@ const solutions = [
     features: ['IFRS compliance', 'Automated reporting', 'General ledger', 'Fixed assets'],
     href: '/solutions/financial-management',
     category: 'Financial'
+  },
+  {
+    icon: Brain,
+    title: 'AI-Powered Executive Insights',
+    description: 'Revolutionary AI-driven analytics providing predictive insights, anomaly detection, and automated business recommendations for strategic decision-making.',
+    features: ['30-90 day revenue forecasting', 'Anomaly detection & alerts', 'AI business recommendations', 'Performance benchmarking'],
+    href: '/solutions/ai-insights',
+    category: 'Intelligence'
+  },
+  {
+    icon: Command,
+    title: 'Command Palette Navigation',
+    description: 'Modern command-driven interface for lightning-fast navigation and operations, reducing task completion time dramatically.',
+    features: ['Quick navigation', 'Smart search', 'Keyboard shortcuts', 'Action commands'],
+    href: '/solutions/command-palette',
+    category: 'Operations'
+  },
+  {
+    icon: TrendingUp,
+    title: 'Advanced Analytics Suite',
+    description: 'Comprehensive business intelligence with customer profitability analysis, seasonal patterns, and trading performance insights.',
+    features: ['Customer profitability', 'Seasonal analytics', 'Trading performance', 'Predictive forecasting'],
+    href: '/solutions/analytics',
+    category: 'Intelligence'
   }
 ];
 
-const categories = ['All', 'Operations', 'Trading', 'Financial'];
+const categories = ['All', 'Operations', 'Trading', 'Financial', 'Intelligence'];
 
 export default function SolutionsPage() {
   return (
@@ -173,9 +197,9 @@ export default function SolutionsPage() {
                   <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Database className="h-8 w-8 text-primary-600" />
                   </div>
-                  <h3 className="font-semibold text-neutral-900 mb-2">Single Database</h3>
+                  <h3 className="font-semibold text-neutral-900 mb-2">Integrated Platform</h3>
                   <p className="text-sm text-neutral-600">
-                    One source of truth for all your petroleum trading data
+                    Centralized system for streamlined operations management
                   </p>
                 </div>
                 

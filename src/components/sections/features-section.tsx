@@ -18,17 +18,33 @@ import {
   FileText,
   Users,
   Settings,
-  ArrowRight
+  ArrowRight,
+  Brain,
+  Command
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const features = [
   {
+    icon: Brain,
+    title: 'AI-Powered Insights',
+    description: 'Revolutionary predictive analytics with 30-90 day forecasting, anomaly detection, and automated business recommendations.',
+    category: 'Intelligence',
+    color: 'from-purple-500 to-pink-500',
+  },
+  {
+    icon: Command,
+    title: 'Command Palette',
+    description: 'Lightning-fast navigation with keyboard shortcuts and smart search for maximum productivity.',
+    category: 'Productivity',
+    color: 'from-blue-500 to-indigo-500',
+  },
+  {
     icon: Package,
     title: 'Batch Management',
     description: 'Complete tracking and management of petroleum batches from arrival to delivery with real-time status monitoring.',
     category: 'Operations',
-    color: 'from-blue-500 to-cyan-500',
+    color: 'from-orange-500 to-red-500',
   },
   {
     icon: Truck,

@@ -14,7 +14,7 @@ const bankingFeatures = [
   {
     icon: Building2,
     title: 'Multi-Bank Connectivity',
-    description: 'Direct integration with major Ghanaian banks including GCB, Ecobank, Standard Chartered, and more.',
+    description: 'Direct integration with major Ghanaian banks and financial institutions for seamless operations.',
   },
   {
     icon: CreditCard,
@@ -44,19 +44,19 @@ const bankingFeatures = [
 ];
 
 const supportedBanks = [
-  { name: 'Ghana Commercial Bank (GCB)', logo: '🏦', features: ['API Integration', 'Bulk Payments', 'Real-time Notifications'] },
-  { name: 'Ecobank Ghana', logo: '🏢', features: ['Direct Debit', 'Trade Finance', 'Multi-currency'] },
-  { name: 'Standard Chartered', logo: '🏛️', features: ['Treasury Services', 'FX Trading', 'Cash Management'] },
-  { name: 'Fidelity Bank', logo: '🏪', features: ['SME Banking', 'Online Banking', 'Mobile Alerts'] },
-  { name: 'CAL Bank', logo: '🏬', features: ['Corporate Banking', 'Trade Services', 'Investment Banking'] },
-  { name: 'UMB', logo: '🏭', features: ['Merchant Banking', 'Asset Management', 'Advisory Services'] }
+  { name: 'Tier 1 Banks', logo: '🏦', features: ['API Integration', 'Bulk Payments', 'Real-time Notifications'] },
+  { name: 'Commercial Banks', logo: '🏢', features: ['Direct Debit', 'Trade Finance', 'Multi-currency'] },
+  { name: 'International Banks', logo: '🏛️', features: ['Treasury Services', 'FX Trading', 'Cash Management'] },
+  { name: 'Regional Banks', logo: '🏪', features: ['SME Banking', 'Online Banking', 'Mobile Alerts'] },
+  { name: 'Investment Banks', logo: '🏬', features: ['Corporate Banking', 'Trade Services', 'Investment Banking'] },
+  { name: 'Merchant Banks', logo: '🏭', features: ['Merchant Banking', 'Asset Management', 'Advisory Services'] }
 ];
 
 const benefits = [
   'Eliminate manual bank reconciliation processes',
   'Real-time visibility into cash positions',
   'Automated regulatory compliance reporting',
-  'Reduced transaction processing time by 80%',
+  'Dramatically reduced transaction processing time',
   'Enhanced fraud detection and prevention',
   'Integrated foreign exchange management'
 ];

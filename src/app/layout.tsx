@@ -7,9 +7,11 @@ import { Toaster } from 'react-hot-toast';
 import '@/styles/globals.css';
 import { siteConfig } from '@/config/site';
 import { Providers } from '@/components/providers';
+import { NextAuthProvider } from '@/components/providers/session-provider';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import ChatbotWidget from '@/components/chatbot/ChatbotWidget';
+import { AdminAccessTrigger } from '@/components/admin/admin-access-trigger';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -113,14 +115,16 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       </head>
-      <body className="min-h-screen bg-white font-sans antialiased">
-        <Providers>
-          <div className="relative flex min-h-screen flex-col">
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
-          <ChatbotWidget />
+      <body className="min-h-screen bg-white font-sans antialiased" suppressHydrationWarning>
+        <NextAuthProvider>
+          <Providers>
+            <div className="relative flex min-h-screen flex-col">
+              <Header />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </div>
+            <ChatbotWidget />
+            <AdminAccessTrigger />
           <Toaster
             position="bottom-right"
             toastOptions={{
@@ -131,7 +135,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
               },
             }}
           />
-        </Providers>
+          </Providers>
+        </NextAuthProvider>
         <Analytics />
         <SpeedInsights />
       </body>

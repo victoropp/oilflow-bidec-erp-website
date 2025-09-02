@@ -3,31 +3,32 @@ import Link from 'next/link';
 import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 import { Logo } from '@/components/ui/logo';
+import { SecretFooterLink } from '@/components/admin/admin-access-trigger';
 
 const footerLinks = {
   solutions: [
-    { name: 'Batch Management', href: '/solutions/batch-management' },
-    { name: 'Vessel Operations', href: '/solutions/vessel-operations' },
-    { name: 'Price-Out System', href: '/solutions/price-out' },
+    { name: 'AI-Powered Insights', href: '/solutions/ai-insights' },
+    { name: 'Command Palette', href: '/solutions/command-palette' },
     { name: 'Ghana Banking', href: '/solutions/ghana-banking' },
+    { name: 'IFRS Compliance', href: '/solutions/ifrs-compliance' },
   ],
-  industries: [
-    { name: 'Petroleum Trading', href: '/industries/petroleum-trading' },
-    { name: 'Depot Operations', href: '/industries/depot-operations' },
-    { name: 'Financial Services', href: '/industries/financial-services' },
-    { name: 'Banking Integration', href: '/industries/banking-integration' },
+  petroleumTrading: [
+    { name: 'Batch Management', href: '/petroleum-trading/batch-management' },
+    { name: 'Price-Out System', href: '/solutions/price-out' },
+    { name: 'Vessel Operations', href: '/petroleum-trading/vessel-operations' },
+    { name: 'Daily Delivery', href: '/petroleum-trading/daily-delivery' },
   ],
   resources: [
-    { name: 'Documentation', href: '/resources/docs' },
-    { name: 'Case Studies', href: '/resources/case-studies' },
-    { name: 'White Papers', href: '/resources/whitepapers' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Implementation Services', href: '/resources#implementation' },
+    { name: 'Training Programs', href: '/resources#training' },
+    { name: 'Support & Maintenance', href: '/resources#support' },
+    { name: 'Contact Us', href: '/contact' },
   ],
   company: [
     { name: 'About Us', href: '/about' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Partners', href: '/partners' },
-    { name: 'News', href: '/news' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Request Demo', href: '/request-demo' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy' },
@@ -80,9 +81,14 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3 text-sm text-neutral-400">
                 <Phone className="h-4 w-4" />
-                <a href={`tel:${siteConfig.contact.phone}`} className="hover:text-white transition-colors">
-                  {siteConfig.contact.phone}
-                </a>
+                <div className="flex flex-col">
+                  <a href={`tel:${siteConfig.contact.phone}`} className="hover:text-white transition-colors">
+                    UK: {siteConfig.contact.phone}
+                  </a>
+                  <a href={`tel:${siteConfig.contact.phoneGhana}`} className="hover:text-white transition-colors">
+                    Ghana: {siteConfig.contact.phoneGhana}
+                  </a>
+                </div>
               </div>
               <div className="flex items-start space-x-3 text-sm text-neutral-400">
                 <MapPin className="h-4 w-4 mt-0.5" />
@@ -113,11 +119,11 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Industries */}
+          {/* Petroleum Trading */}
           <div>
-            <h3 className="font-display font-semibold mb-4">Industries</h3>
+            <h3 className="font-display font-semibold mb-4">Petroleum Trading</h3>
             <ul className="space-y-2">
-              {footerLinks.industries.map((link) => (
+              {footerLinks.petroleumTrading.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -184,8 +190,9 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-neutral-800 py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-            <div className="text-sm text-neutral-400">
+            <div className="text-sm text-neutral-400 flex items-center gap-2">
               © {new Date().getFullYear()} {siteConfig.company.name}. All rights reserved.
+              <SecretFooterLink />
             </div>
             <div className="flex items-center space-x-6 text-sm">
               {footerLinks.legal.map((link) => (

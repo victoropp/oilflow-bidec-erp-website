@@ -10,7 +10,8 @@ export const siteConfig = {
   },
   contact: {
     email: 'info@bidec-erp.com',
-    phone: '+1-800-BIDEC-ERP',
+    phone: '+44 7442 852675',
+    phoneGhana: '+233 248769377',
     address: {
       street: '123 Energy Plaza',
       city: 'Houston',

@@ -3,15 +3,15 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Play, CheckCircle, TrendingUp, Shield, Zap } from 'lucide-react';
+import { ArrowRight, CheckCircle, TrendingUp, Shield, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { AnimatedCounter } from '@/components/ui/animated-counter';
 
 const stats = [
-  { label: 'Operations Managed', value: 500, suffix: '+', icon: TrendingUp },
-  { label: 'Cost Reduction', value: 35, suffix: '%', icon: CheckCircle },
-  { label: 'Compliance Rate', value: 99.9, suffix: '%', icon: Shield },
-  { label: 'Process Efficiency', value: 40, suffix: '%', icon: Zap },
+  { label: 'Operations Managed', value: 'Hundreds', suffix: '', icon: TrendingUp, isNumeric: false },
+  { label: 'Cost Reduction', value: 'Significant', suffix: '', icon: CheckCircle, isNumeric: false },
+  { label: 'Compliance Rate', value: 'Exceptional', suffix: '', icon: Shield, isNumeric: false },
+  { label: 'Process Efficiency', value: 'Enhanced', suffix: '', icon: Zap, isNumeric: false },
 ];
 
 const floatingElements = [
@@ -70,7 +70,7 @@ export function HeroSection() {
                 className="inline-flex items-center px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-medium"
               >
                 <Zap className="h-4 w-4 mr-2" />
-                Petroleum Trading ERP for Ghana
+                AI-Powered Petroleum ERP Built by Industry Veterans
               </motion.div>
 
               <motion.h1
@@ -79,9 +79,9 @@ export function HeroSection() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="text-5xl lg:text-7xl font-bold text-neutral-900 leading-tight"
               >
-                Master Your{' '}
+                Finally, ERP That{' '}
                 <span className="text-gradient">
-                  Petroleum Trading
+                  Gets Your Business
                 </span>
               </motion.h1>
 
@@ -91,9 +91,10 @@ export function HeroSection() {
                 transition={{ duration: 0.6, delay: 0.5 }}
                 className="text-xl text-neutral-600 leading-relaxed max-w-2xl"
               >
-                Comprehensive ERP for petroleum trading in Ghana. Features batch management, 
-                daily delivery tracking, price-out system, vessel management, and seamless 
-                Ghana banking integration with dual currency support (GHS/USD).
+                After decades in Ghana's petroleum sector, we built the ERP solution the industry 
+                actually needs. Features batch management, daily delivery tracking, price-out system, 
+                vessel management, and seamless Ghana banking integration - designed by professionals 
+                who understand your challenges firsthand.
               </motion.p>
             </div>
 
@@ -111,10 +112,10 @@ export function HeroSection() {
                 </Button>
               </Link>
               
-              <Link href="/watch-demo">
+              <Link href="/contact">
                 <Button variant="outline" size="lg" className="group">
-                  <Play className="h-5 w-5 mr-2 group-hover:scale-110 transition-transform" />
-                  Watch Demo
+                  <ArrowRight className="h-5 w-5 mr-2 group-hover:translate-x-1 transition-transform" />
+                  Contact Sales
                 </Button>
               </Link>
             </motion.div>
@@ -161,13 +162,19 @@ export function HeroSection() {
                   <div className="flex items-center justify-between mb-2">
                     <stat.icon className="h-6 w-6 text-primary-500" />
                     <div className="text-2xl font-bold text-neutral-900">
-                      <AnimatedCounter
-                        from={0}
-                        to={stat.value}
-                        duration={2}
-                        delay={1 + index * 0.1}
-                      />
-                      {stat.suffix}
+                      {stat.isNumeric ? (
+                        <>
+                          <AnimatedCounter
+                            from={0}
+                            to={typeof stat.value === 'number' ? stat.value : 0}
+                            duration={2}
+                            delay={1 + index * 0.1}
+                          />
+                          {stat.suffix}
+                        </>
+                      ) : (
+                        <span>{stat.value}</span>
+                      )}
                     </div>
                   </div>
                   <div className="text-sm text-neutral-600">{stat.label}</div>
@@ -180,7 +187,7 @@ export function HeroSection() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 1.2 }}
-              className="relative bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/30"
+              className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/30"
             >
               <div className="aspect-video bg-gradient-to-br from-primary-100 to-secondary-100 rounded-xl flex items-center justify-center">
                 <div className="text-center space-y-4">
@@ -190,28 +197,10 @@ export function HeroSection() {
                     className="w-16 h-16 mx-auto border-4 border-primary-300 border-t-primary-600 rounded-full"
                   />
                   <div className="text-sm text-neutral-600">
-                    Interactive Demo Preview
+                    ERP System Overview
                   </div>
                 </div>
               </div>
-              
-              {/* Floating action button */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 1.5 }}
-                className="absolute -bottom-4 -right-4"
-              >
-                <Link href="/watch-demo">
-                  <Button
-                    size="lg"
-                    variant="gradient"
-                    className="rounded-full shadow-2xl hover:shadow-3xl group"
-                  >
-                    <Play className="h-6 w-6 group-hover:scale-110 transition-transform" />
-                  </Button>
-                </Link>
-              </motion.div>
             </motion.div>
           </motion.div>
         </div>

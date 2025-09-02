@@ -191,16 +191,20 @@ function extractEntities(message: string, intent: string): Record<string, any> {
 
 // Advanced sentiment analysis
 function analyzeSentiment(message: string, language: SupportedLanguage = 'en'): number {
-  const positiveWords = {
+  const positiveWords: Record<SupportedLanguage, string[]> = {
     en: ['good', 'great', 'excellent', 'amazing', 'helpful', 'thanks', 'perfect', 'love', 'awesome', 'fantastic'],
     fr: ['bon', 'bien', 'excellent', 'magnifique', 'merci', 'parfait', 'fantastique', 'super'],
     ar: ['جيد', 'ممتاز', 'رائع', 'شكرا', 'مثالي'],
+    sw: ['nzuri', 'bora', 'mzuri', 'vizuri', 'asante'],
+    ha: ['mai kyau', 'kyakkyawa', 'nagari', 'na gode'],
   };
   
-  const negativeWords = {
+  const negativeWords: Record<SupportedLanguage, string[]> = {
     en: ['bad', 'terrible', 'awful', 'hate', 'disappointed', 'frustrated', 'annoying', 'useless', 'poor'],
     fr: ['mauvais', 'terrible', 'nul', 'frustré', 'déçu', 'ennuyeux'],
     ar: ['سيء', 'فظيع', 'محبط', 'غاضب'],
+    sw: ['mbaya', 'vibaya', 'uchungu', 'hasira'],
+    ha: ['mugu', 'mummuna', 'ba kyau', 'bacin rai'],
   };
   
   const content = message.toLowerCase();
@@ -228,9 +232,10 @@ function generateContextualResponse(
   leadScore: number
 ): string {
   // Try to find specific knowledge base item
-  const knowledgeItem = findKnowledgeItem(intent, language);
+  const supportedLanguage = (['en', 'fr'].includes(language)) ? language as 'en' | 'fr' : 'en';
+  const knowledgeItem = findKnowledgeItem(intent, supportedLanguage);
   if (knowledgeItem) {
-    return knowledgeItem.content[language] || knowledgeItem.content.en;
+    return knowledgeItem.content[supportedLanguage] || knowledgeItem.content.en;
   }
   
   // Use translation service for common responses
@@ -254,7 +259,8 @@ function generateContextualResponse(
       }
     };
     
-    const langResponses = segmentResponses[language] || segmentResponses.en;
+    const supportedLang = (['en', 'fr'].includes(language)) ? language as 'en' | 'fr' : 'en';
+    const langResponses = segmentResponses[supportedLang] || segmentResponses.en;
     return langResponses[entities.segment as keyof typeof langResponses] || langResponses.upstream;
   }
   
@@ -377,8 +383,7 @@ export async function POST(request: NextRequest) {
     ChatbotAnalytics.updateConversation(validatedData.sessionId, {
       leadScore: newLeadScore,
       language: detectedLanguage,
-      intents: [...new Set([...validatedData.conversationHistory.map(m => m.metadata?.intent).filter(Boolean), intent])],
-      sentimentScore: sentiment
+      intents: Array.from(new Set([...validatedData.conversationHistory.map(m => m.metadata?.intent).filter(Boolean), intent]))
     });
     
     // Generate suggestions
@@ -479,7 +484,8 @@ function generateSmartSuggestions(
       en: ["Schedule a personalized demo", "Discuss pricing options", "See integration capabilities", "Talk to a specialist"],
       fr: ["Planifier une démo personnalisée", "Discuter des options tarifaires", "Voir les capacités d'intégration", "Parler à un spécialiste"]
     };
-    return contextualSuggestions[language] || contextualSuggestions.en;
+    const supportedLanguage = (['en', 'fr'].includes(language)) ? language as 'en' | 'fr' : 'en';
+    return contextualSuggestions[supportedLanguage] || contextualSuggestions.en;
   }
   
   if (intent === 'pricing_inquiry') {

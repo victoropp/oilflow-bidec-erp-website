@@ -12,106 +12,109 @@ export const metadata: Metadata = {
 
 const resourceCategories = [
   {
-    icon: FileText,
-    title: 'Whitepapers & Case Studies',
-    description: 'In-depth analysis of petroleum industry challenges and ERP solutions',
-    resources: [
-      { title: 'Digital Transformation in Ghana Petroleum Sector', type: 'Whitepaper', date: '2024' },
-      { title: 'Batch Management Best Practices', type: 'Case Study', date: '2024' },
-      { title: 'Regulatory Compliance Guide for Petroleum Trading', type: 'Guide', date: '2024' },
-      { title: 'ROI Analysis: ERP Implementation Success Stories', type: 'Report', date: '2023' }
-    ]
-  },
-  {
-    icon: Video,
-    title: 'Training & Tutorials',
-    description: 'Comprehensive training materials and video tutorials for users',
-    resources: [
-      { title: 'Getting Started with Batch Management', type: 'Video Tutorial', date: '2024' },
-      { title: 'Vessel Operations Workflow Training', type: 'Training Module', date: '2024' },
-      { title: 'Financial Reporting & Analytics', type: 'Webinar', date: '2024' },
-      { title: 'User Administration Best Practices', type: 'Training Guide', date: '2024' }
-    ]
-  },
-  {
     icon: BookOpen,
-    title: 'Industry Insights',
-    description: 'Latest trends, regulations, and insights in Ghana petroleum industry',
+    title: 'Industry Expertise',
+    description: 'Leverage our team\'s decades of petroleum industry experience',
     resources: [
-      { title: 'Ghana Petroleum Industry Report 2024', type: 'Report', date: '2024' },
-      { title: 'NPA Regulatory Updates & Compliance', type: 'Regulatory Update', date: '2024' },
-      { title: 'Market Analysis: Fuel Distribution Trends', type: 'Analysis', date: '2024' },
-      { title: 'Banking Integration in Petroleum Sector', type: 'Article', date: '2023' }
+      { title: 'Free ERP Consultation', type: 'Expert Consultation', available: true },
+      { title: 'Petroleum Operations Assessment', type: 'Business Analysis', available: true },
+      { title: 'Regulatory Compliance Guidance', type: 'Advisory Service', available: true },
+      { title: 'Implementation Planning', type: 'Strategic Planning', available: true }
+    ]
+  },
+  {
+    icon: Users,
+    title: 'Professional Services',
+    description: 'Connect with industry veterans for personalized guidance',
+    resources: [
+      { title: 'One-on-One Expert Sessions', type: 'Personal Consultation', available: true },
+      { title: 'Business Process Review', type: 'Operational Analysis', available: true },
+      { title: 'Technology Readiness Assessment', type: 'Technical Evaluation', available: true },
+      { title: 'ROI Planning Workshop', type: 'Strategic Session', available: true }
+    ]
+  },
+  {
+    icon: FileText,
+    title: 'Coming Soon - 2025',
+    description: 'Comprehensive resources being developed for platform launch',
+    resources: [
+      { title: 'User Training Materials', type: 'Training Content', available: false },
+      { title: 'Implementation Guides', type: 'Documentation', available: false },
+      { title: 'Best Practices Library', type: 'Knowledge Base', available: false },
+      { title: 'Video Tutorial Series', type: 'Training Videos', available: false }
     ]
   }
 ];
 
-const webinars = [
+const consultationServices = [
   {
-    title: 'Mastering Petroleum Batch Management',
-    date: 'December 15, 2024',
-    time: '2:00 PM GMT',
-    speaker: 'Samuel Osei, Head of Petroleum Solutions',
-    description: 'Learn advanced batch tracking techniques and best practices for inventory management.',
-    status: 'upcoming'
+    title: 'Free ERP Strategy Consultation',
+    description: 'Get expert guidance on ERP implementation planning for your petroleum operations.',
+    duration: '60 minutes',
+    format: 'Video Call or In-Person',
+    available: true
   },
   {
-    title: 'Ghana Banking Integration for Petroleum Companies',
-    date: 'November 20, 2024',
-    time: '3:00 PM GMT',
-    speaker: 'Grace Adjei, Head of Financial Systems',
-    description: 'Streamline your financial operations with seamless banking integration.',
-    status: 'recorded'
+    title: 'Business Process Assessment',
+    description: 'Comprehensive review of your current operations and technology readiness.',
+    duration: '2-3 hours',
+    format: 'On-site or Remote',
+    available: true
   },
   {
-    title: 'Regulatory Compliance Automation',
-    date: 'October 25, 2024',
-    time: '2:30 PM GMT',
-    speaker: 'Kwame Asante, CEO',
-    description: 'Automate your regulatory reporting and ensure 100% compliance.',
-    status: 'recorded'
+    title: 'Industry Expert Roundtable - Coming 2025',
+    description: 'Join discussions with petroleum industry experts and ERP professionals.',
+    duration: 'Quarterly Events',
+    format: 'Hybrid Events',
+    available: false
   }
 ];
 
-const tools = [
-  {
-    title: 'ERP Readiness Assessment',
-    description: 'Evaluate your organization\'s readiness for ERP implementation',
-    type: 'Interactive Tool',
-    action: 'Take Assessment'
-  },
+const practicalTools = [
   {
     title: 'ROI Calculator',
     description: 'Calculate potential return on investment for your ERP project',
-    type: 'Calculator',
-    action: 'Calculate ROI'
+    type: 'Available Now',
+    action: 'Calculate ROI',
+    available: true,
+    link: '/#roi-calculator'
   },
   {
-    title: 'Implementation Timeline Planner',
-    description: 'Plan your ERP implementation with our step-by-step guide',
-    type: 'Planner',
-    action: 'Start Planning'
+    title: 'Expert Consultation',
+    description: 'Get personalized assessment of your ERP readiness and planning',
+    type: 'Professional Service',
+    action: 'Schedule Call',
+    available: true,
+    link: '/contact'
+  },
+  {
+    title: 'Implementation Planner',
+    description: 'Interactive planning tools being developed for 2025 platform launch',
+    type: 'Coming 2025',
+    action: 'Coming Soon',
+    available: false,
+    link: null
   }
 ];
 
-const certifications = [
+const upcomingPrograms = [
   {
-    title: 'OilFlow BIDEC User Certification',
-    description: 'Comprehensive certification program for end users',
-    duration: '40 hours',
-    level: 'Beginner to Advanced'
+    title: 'User Training Program',
+    description: 'Comprehensive training for end users - available with platform launch',
+    timeline: 'Q2 2025',
+    status: 'In Development'
   },
   {
-    title: 'System Administrator Certification',
-    description: 'Advanced certification for system administrators and IT professionals',
-    duration: '60 hours',
-    level: 'Advanced'
+    title: 'Administrator Training',
+    description: 'Advanced training for system administrators and IT professionals',
+    timeline: 'Q3 2025',
+    status: 'Planning Phase'
   },
   {
-    title: 'Petroleum Industry Specialist',
-    description: 'Industry-specific certification focusing on petroleum operations',
-    duration: '80 hours',
-    level: 'Expert'
+    title: 'Industry Specialist Program',
+    description: 'Industry-specific training focusing on petroleum operations',
+    timeline: 'Q4 2025',
+    status: 'Planning Phase'
   }
 ];
 
@@ -127,8 +130,8 @@ export default function ResourcesPage() {
               <span className="text-primary-600"> Resources</span>
             </h1>
             <p className="text-xl text-neutral-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Access comprehensive resources to maximize your petroleum ERP success. From implementation guides 
-              to industry insights, we provide everything you need to excel.
+              While we finalize our platform for 2025 launch, explore valuable insights about petroleum ERP implementation 
+              and connect with our industry experts for guidance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/request-demo">
@@ -137,10 +140,12 @@ export default function ResourcesPage() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                Download Catalog
-                <Download className="ml-2 h-5 w-5" />
-              </Button>
+              <Link href="/contact">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                  Contact Experts
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -179,17 +184,29 @@ export default function ResourcesPage() {
                   
                   <div className="grid md:grid-cols-2 gap-6">
                     {category.resources.map((resource) => (
-                      <div key={resource.title} className="flex items-start p-4 border border-neutral-200 rounded-lg hover:border-primary-200 hover:bg-primary-50/50 transition-colors">
+                      <div key={resource.title} className={`flex items-start p-4 border border-neutral-200 rounded-lg transition-colors ${
+                        resource.available ? 'hover:border-primary-200 hover:bg-primary-50/50' : 'opacity-60'
+                      }`}>
                         <div className="flex-1">
                           <h4 className="font-semibold text-neutral-900 mb-1">{resource.title}</h4>
                           <div className="flex items-center gap-4 text-sm text-neutral-600">
-                            <span className="px-2 py-1 bg-neutral-100 rounded text-xs">{resource.type}</span>
-                            <span>{resource.date}</span>
+                            <span className={`px-2 py-1 rounded text-xs ${
+                              resource.available ? 'bg-green-100 text-green-700' : 'bg-neutral-100'
+                            }`}>{resource.type}</span>
+                            <span>{resource.available ? 'Available Now' : 'Coming 2025'}</span>
                           </div>
                         </div>
-                        <Button variant="outline" size="sm" className="ml-4">
-                          <Download className="h-4 w-4" />
-                        </Button>
+                        {resource.available ? (
+                          <Link href="/contact">
+                            <Button variant="outline" size="sm" className="ml-4">
+                              Contact Us
+                            </Button>
+                          </Link>
+                        ) : (
+                          <Button variant="outline" size="sm" className="ml-4" disabled>
+                            Coming Soon
+                          </Button>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -205,42 +222,52 @@ export default function ResourcesPage() {
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-neutral-900 mb-4">
-              Webinars & Training Sessions
+              Expert Consultation Services
             </h2>
             <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
-              Join our expert-led webinars to learn from industry professionals and stay updated on latest trends.
+              Connect directly with our industry veterans for personalized guidance and strategic planning.
             </p>
           </div>
 
           <div className="space-y-6">
-            {webinars.map((webinar) => (
-              <div key={webinar.title} className="bg-white rounded-xl p-6 shadow-lg border border-neutral-200">
+            {consultationServices.map((service) => (
+              <div key={service.title} className={`bg-white rounded-xl p-6 shadow-lg border border-neutral-200 ${
+                !service.available ? 'opacity-60' : ''
+              }`}>
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                   <div className="flex-1 mb-6 lg:mb-0">
                     <div className="flex items-center mb-2">
                       <h3 className="text-xl font-display font-semibold text-neutral-900 mr-3">
-                        {webinar.title}
+                        {service.title}
                       </h3>
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                        webinar.status === 'upcoming' 
+                        service.available 
                           ? 'bg-green-100 text-green-700' 
-                          : 'bg-blue-100 text-blue-700'
+                          : 'bg-neutral-100 text-neutral-700'
                       }`}>
-                        {webinar.status === 'upcoming' ? 'Upcoming' : 'Recorded'}
+                        {service.available ? 'Available Now' : 'Coming 2025'}
                       </span>
                     </div>
-                    <p className="text-neutral-600 mb-3">{webinar.description}</p>
+                    <p className="text-neutral-600 mb-3">{service.description}</p>
                     <div className="flex flex-wrap gap-4 text-sm text-neutral-500">
-                      <span>📅 {webinar.date}</span>
-                      <span>⏰ {webinar.time}</span>
-                      <span>👨‍💼 {webinar.speaker}</span>
+                      <span>⏱️ {service.duration}</span>
+                      <span>💻 {service.format}</span>
                     </div>
                   </div>
                   <div className="flex gap-3">
-                    <Button variant="outline" size="sm">
-                      {webinar.status === 'upcoming' ? 'Register' : 'Watch Recording'}
-                      <ExternalLink className="ml-2 h-4 w-4" />
-                    </Button>
+                    {service.available ? (
+                      <Link href="/contact">
+                        <Button variant="outline" size="sm">
+                          Schedule Now
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </Link>
+                    ) : (
+                      <Button variant="outline" size="sm" disabled>
+                        Coming Soon
+                        <ExternalLink className="ml-2 h-4 w-4" />
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -262,21 +289,34 @@ export default function ResourcesPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {tools.map((tool) => (
-              <div key={tool.title} className="bg-white rounded-xl p-8 shadow-lg border border-neutral-200 text-center hover:shadow-xl transition-shadow">
+            {practicalTools.map((tool) => (
+              <div key={tool.title} className={`bg-white rounded-xl p-8 shadow-lg border border-neutral-200 text-center transition-shadow ${
+                tool.available ? 'hover:shadow-xl' : 'opacity-60'
+              }`}>
                 <h3 className="text-xl font-display font-semibold text-neutral-900 mb-4">
                   {tool.title}
                 </h3>
                 <p className="text-neutral-600 mb-4">
                   {tool.description}
                 </p>
-                <span className="inline-block px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium mb-6">
+                <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium mb-6 ${
+                  tool.available ? 'bg-green-100 text-green-700' : 'bg-neutral-100 text-neutral-700'
+                }`}>
                   {tool.type}
                 </span>
-                <Button className="w-full">
-                  {tool.action}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                {tool.available && tool.link ? (
+                  <Link href={tool.link}>
+                    <Button className="w-full">
+                      {tool.action}
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                ) : (
+                  <Button className="w-full" disabled>
+                    {tool.action}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                )}
               </div>
             ))}
           </div>
@@ -288,35 +328,37 @@ export default function ResourcesPage() {
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-display font-bold mb-4">
-              Certification Programs
+              Training Programs - Coming 2025
             </h2>
             <p className="text-lg text-neutral-300 max-w-3xl mx-auto">
-              Advance your career with our comprehensive certification programs designed for petroleum industry professionals.
+              Comprehensive training programs being developed alongside our platform for petroleum industry professionals.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
-            {certifications.map((cert) => (
-              <div key={cert.title} className="bg-neutral-800 rounded-xl p-8 border border-neutral-700">
+            {upcomingPrograms.map((program) => (
+              <div key={program.title} className="bg-neutral-800 rounded-xl p-8 border border-neutral-700 opacity-75">
                 <h3 className="text-xl font-display font-semibold mb-4">
-                  {cert.title}
+                  {program.title}
                 </h3>
                 <p className="text-neutral-300 mb-6">
-                  {cert.description}
+                  {program.description}
                 </p>
                 <div className="space-y-2 mb-8">
                   <div className="flex justify-between">
-                    <span className="text-neutral-400">Duration:</span>
-                    <span className="text-white">{cert.duration}</span>
+                    <span className="text-neutral-400">Timeline:</span>
+                    <span className="text-white">{program.timeline}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-neutral-400">Level:</span>
-                    <span className="text-white">{cert.level}</span>
+                    <span className="text-neutral-400">Status:</span>
+                    <span className="text-orange-300">{program.status}</span>
                   </div>
                 </div>
-                <Button variant="outline" className="w-full border-neutral-600 text-white hover:bg-white hover:text-neutral-900">
-                  Learn More
-                </Button>
+                <Link href="/contact">
+                  <Button variant="outline" className="w-full border-neutral-600 text-white hover:bg-white hover:text-neutral-900">
+                    Get Notified
+                  </Button>
+                </Link>
               </div>
             ))}
           </div>
@@ -368,8 +410,8 @@ export default function ResourcesPage() {
               Ready to Start Your ERP Journey?
             </h2>
             <p className="text-lg opacity-90 mb-8">
-              Use our resources to prepare for success, then let our experts guide you through 
-              the implementation process for optimal results.
+              Connect with our industry veterans today for expert guidance, then be ready for our 
+              comprehensive platform and resources launching in 2025.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/request-demo">

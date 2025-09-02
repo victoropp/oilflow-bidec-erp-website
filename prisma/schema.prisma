@@ -1,0 +1,144 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model DemoRequest {
+  id                String    @id @default(cuid())
+  requestId         String    @unique
+  
+  // Personal Information
+  firstName         String
+  lastName          String
+  email             String
+  phone             String
+  
+  // Company Information
+  company           String
+  jobTitle          String
+  companySize       String
+  industry          String
+  currentSoftware   String?
+  
+  // Business Information
+  challenges        String
+  additionalNotes   String?
+  
+  // Scheduling
+  preferredDate     String
+  preferredTime     String
+  
+  // Metadata
+  consent           Boolean   @default(true)
+  ipAddress         String?
+  userAgent         String?
+  status            String    @default("pending") // pending, contacted, scheduled, completed, cancelled
+  
+  // Timestamps
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  
+  // Follow-up tracking
+  followUpNotes     String?
+  contactedAt       DateTime?
+  scheduledAt       DateTime?
+  completedAt       DateTime?
+  
+  // Relations
+  emailLogs         EmailLog[]
+  
+  @@map("demo_requests")
+}
+
+model EmailLog {
+  id          String    @id @default(cuid())
+  demoRequestId String?
+  emailType   String    // confirmation, sales_notification, reminder, etc.
+  recipient   String
+  subject     String
+  status      String    // sent, failed, bounced, delivered
+  provider    String    // resend, sendgrid, etc.
+  providerId  String?   // ID from email provider
+  error       String?
+  sentAt      DateTime  @default(now())
+  
+  demoRequest DemoRequest? @relation(fields: [demoRequestId], references: [id])
+  
+  @@map("email_logs")
+}
+
+model ApiUsage {
+  id          String    @id @default(cuid())
+  endpoint    String
+  method      String
+  ipAddress   String
+  userAgent   String?
+  status      Int
+  responseTime Int?     // milliseconds
+  error       String?
+  createdAt   DateTime  @default(now())
+  
+  @@map("api_usage")
+}
+
+// NextAuth.js Models
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  image         String?
+  role          String    @default("user") // user, admin, sales
+  accounts      Account[]
+  sessions      Session[]
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@map("users")
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map("verificationtokens")
+}

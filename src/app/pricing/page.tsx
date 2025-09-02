@@ -15,9 +15,9 @@ const pricingPlans = [
     name: 'Starter',
     icon: Users,
     description: 'Perfect for small petroleum depots and distributors',
-    monthlyPrice: '$2,500',
-    yearlyPrice: '$25,000',
-    savings: 'Save $5,000',
+    monthlyPrice: 'Contact Us',
+    yearlyPrice: 'Custom Quote',
+    savings: 'Volume Discounts',
     features: [
       'Basic batch management',
       'Inventory tracking (up to 3 products)',
@@ -41,9 +41,9 @@ const pricingPlans = [
     name: 'Professional',
     icon: Building,
     description: 'Comprehensive solution for medium petroleum companies',
-    monthlyPrice: '$7,500',
-    yearlyPrice: '$75,000',
-    savings: 'Save $15,000',
+    monthlyPrice: 'Contact Us',
+    yearlyPrice: 'Custom Quote',
+    savings: 'Competitive Rates',
     features: [
       'Full batch management suite',
       'Vessel operations management',
@@ -99,32 +99,32 @@ const addOnServices = [
   {
     name: 'Additional User Licenses',
     description: 'Extra user seats beyond plan limits',
-    pricing: 'From $50/user/month'
+    pricing: 'Competitive Rates'
   },
   {
     name: 'Extra Bank Integrations',
     description: 'Additional banking connections',
-    pricing: '$500/bank/month'
+    pricing: 'Custom Pricing'
   },
   {
     name: 'Custom Integrations',
     description: 'Third-party system integrations',
-    pricing: 'From $2,000 one-time'
+    pricing: 'Quote Available'
   },
   {
     name: 'Premium Support',
     description: '24/7 phone and priority support',
-    pricing: '$1,000/month'
+    pricing: 'Enterprise Package'
   },
   {
     name: 'Advanced Training',
     description: 'On-site training and certification',
-    pricing: '$5,000/session'
+    pricing: 'Contact Sales'
   },
   {
     name: 'Data Migration',
     description: 'Professional data migration services',
-    pricing: 'From $10,000 one-time'
+    pricing: 'Project-Based Quote'
   }
 ];
 
@@ -152,7 +152,7 @@ const implementationPackages = [
       'User training sessions',
       'Go-live support'
     ],
-    price: 'From $15,000'
+    price: 'Custom Quote'
   },
   {
     name: 'White Glove Implementation',
@@ -166,7 +166,7 @@ const implementationPackages = [
       'Custom integrations',
       'Post-launch optimization'
     ],
-    price: 'From $50,000'
+    price: 'Enterprise Pricing'
   }
 ];
 
@@ -443,16 +443,16 @@ export default function PricingPage() {
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-neutral-200 mb-8">
               <div className="grid md:grid-cols-3 gap-6 text-center">
                 <div>
-                  <div className="text-3xl font-bold text-green-600 mb-2">35%</div>
-                  <div className="text-sm text-neutral-600">Average Cost Reduction</div>
+                  <div className="text-3xl font-bold text-green-600 mb-2">Significant</div>
+                  <div className="text-sm text-neutral-600">Cost Reduction</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-blue-600 mb-2">6 Months</div>
-                  <div className="text-sm text-neutral-600">Typical ROI Timeline</div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">Rapid</div>
+                  <div className="text-sm text-neutral-600">ROI Timeline</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-primary-600 mb-2">250%</div>
-                  <div className="text-sm text-neutral-600">Average 3-Year ROI</div>
+                  <div className="text-3xl font-bold text-primary-600 mb-2">Exceptional</div>
+                  <div className="text-sm text-neutral-600">Long-term ROI</div>
                 </div>
               </div>
             </div>

@@ -74,17 +74,28 @@ export function DemoBookingForm() {
     setIsSubmitting(true);
     
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Here you would typically send the data to your backend
-      console.log('Demo booking data:', data);
-      
+      const response = await fetch('/api/demo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || 'Failed to submit demo request');
+      }
+
+      console.log('Demo request submitted successfully:', result);
       setIsSuccess(true);
-      toast.success('Demo request submitted successfully!');
+      toast.success('Demo request submitted successfully! Check your email for confirmation.');
       reset();
     } catch (error) {
-      toast.error('Failed to submit demo request. Please try again.');
+      console.error('Demo submission error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Failed to submit demo request. Please try again.';
+      toast.error(errorMessage);
     } finally {
       setIsSubmitting(false);
     }

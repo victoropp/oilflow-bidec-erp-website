@@ -1,42 +1,69 @@
 # OilFlow BIDEC ERP Website
 
-A high-performance, conversion-optimized website for OilFlow BIDEC ERP - a comprehensive petroleum operations management system.
+A production-ready, high-performance website for OilFlow BIDEC ERP - Ghana's leading petroleum trading ERP solution built by industry veterans.
 
 ## 🚀 Tech Stack
 
-- **Framework**: Next.js 14+ with App Router
+- **Framework**: Next.js 15.5.2 with App Router & Turbopack
+- **React**: 19.1.1 with latest features
 - **Styling**: Tailwind CSS with custom design system
 - **Animations**: Framer Motion
-- **CMS**: Contentful (Headless)
+- **Authentication**: NextAuth.js with Prisma adapter
+- **Database**: PostgreSQL with Prisma ORM
 - **Forms**: React Hook Form + Zod validation
-- **Analytics**: Vercel Analytics + Google Analytics 4
+- **Email**: Resend for transactional emails
+- **Analytics**: Vercel Analytics & Speed Insights
 - **Deployment**: Vercel with global CDN
 
 ## 🏗️ Project Structure
 
 ```
 src/
-├── app/                    # Next.js 14 App Router
-│   ├── layout.tsx         # Root layout with providers
-│   ├── page.tsx           # Homepage
-│   ├── request-demo/      # Demo booking page
-│   ├── sitemap.ts         # Dynamic sitemap
-│   ├── robots.ts          # SEO robots file
-│   └── manifest.ts        # PWA manifest
+├── app/                          # Next.js 15 App Router
+│   ├── layout.tsx               # Root layout with providers
+│   ├── page.tsx                 # Homepage
+│   ├── about/                   # About page
+│   ├── contact/                 # Contact page  
+│   ├── careers/                 # Careers page
+│   ├── pricing/                 # Pricing page
+│   ├── resources/               # Resources page
+│   ├── request-demo/            # Demo booking page
+│   ├── admin/                   # Admin portal pages
+│   │   ├── login/              # Admin login
+│   │   ├── dashboard/          # Admin dashboard
+│   │   └── users/              # User management
+│   ├── api/                     # API routes
+│   │   ├── auth/               # NextAuth endpoints
+│   │   ├── admin/              # Admin API routes
+│   │   ├── demo/               # Demo booking API
+│   │   └── contact/            # Contact form API
+│   ├── solutions/               # Solution pages
+│   │   ├── ai-insights/        # AI insights page
+│   │   ├── analytics/          # Analytics suite page
+│   │   ├── command-palette/    # Command palette page
+│   │   └── [other-solutions]/  # Other solution pages
+│   └── petroleum-trading/       # Petroleum trading pages
+│       ├── batch-management/   # Batch management page
+│       ├── sales-allocation/   # Sales allocation page
+│       └── [other-features]/   # Other feature pages
 ├── components/
-│   ├── forms/             # Form components
-│   ├── layout/            # Layout components (Header, Footer)
-│   ├── sections/          # Page sections
-│   └── ui/                # Reusable UI components
-├── lib/                   # Utility libraries
-│   ├── analytics.ts       # Analytics tracking
-│   ├── contentful.ts      # CMS integration
-│   ├── performance.ts     # Performance monitoring
-│   ├── seo.ts            # SEO utilities
-│   └── utils.ts          # General utilities
-├── types/                 # TypeScript type definitions
-├── config/               # Configuration files
-└── styles/               # Global styles
+│   ├── admin/                  # Admin-specific components
+│   ├── forms/                  # Form components
+│   ├── layout/                 # Layout components (Header, Footer)
+│   ├── providers/              # Context providers
+│   ├── sections/               # Page sections
+│   └── ui/                     # Reusable UI components
+├── lib/                        # Utility libraries
+│   ├── auth.ts                 # Authentication logic
+│   ├── database.ts             # Database utilities
+│   ├── email.ts                # Email service
+│   ├── logger.ts               # Logging utilities
+│   ├── rate-limit.ts           # Rate limiting
+│   └── chatbot/                # Chatbot functionality
+├── middleware/                 # Next.js middleware
+├── prisma/                     # Database schema and migrations
+├── config/                     # Configuration files
+└── styles/                     # Global styles
 ```
 
 ## 🎨 Design System

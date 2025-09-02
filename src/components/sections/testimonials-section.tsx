@@ -17,9 +17,9 @@ const testimonials = [
     industry: "Petroleum Trading",
     rating: 5,
     results: {
-      efficiency: "+40%",
-      costs: "-35%",
-      compliance: "99.9%"
+      efficiency: "Enhanced",
+      costs: "Reduced",
+      compliance: "Excellent"
     },
     image: "/testimonials/kwame-asante.jpg",
   },
@@ -33,9 +33,9 @@ const testimonials = [
     industry: "Banking Integration",
     rating: 5,
     results: {
-      efficiency: "+30%",
-      costs: "-25%",
-      compliance: "100%"
+      efficiency: "Improved",
+      costs: "Lowered",
+      compliance: "Outstanding"
     },
     image: "/testimonials/akosua-osei.jpg",
   },
@@ -49,9 +49,9 @@ const testimonials = [
     industry: "Depot Operations", 
     rating: 5,
     results: {
-      efficiency: "+45%",
-      costs: "-30%",
-      compliance: "99.8%"
+      efficiency: "Optimized",
+      costs: "Decreased",
+      compliance: "Exceptional"
     },
     image: "/testimonials/john-mensah.jpg",
   },
@@ -65,9 +65,9 @@ const testimonials = [
     industry: "Financial Services",
     rating: 5,
     results: {
-      efficiency: "+35%",
-      costs: "-28%",
-      compliance: "99.9%"
+      efficiency: "Streamlined",
+      costs: "Minimized",
+      compliance: "Superior"
     },
     image: "/testimonials/grace-nkrumah.jpg",
   },

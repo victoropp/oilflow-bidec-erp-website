@@ -49,7 +49,7 @@ const ghanaSpecificFeatures = [
   },
   {
     title: 'Local Banking Integration',
-    description: 'Direct integration with major Ghanaian banks including GCB, Ecobank, and Standard Chartered for seamless financial operations.',
+    description: 'Direct integration with major Ghanaian banks and financial institutions for seamless financial operations.',
     icon: Globe,
   },
   {

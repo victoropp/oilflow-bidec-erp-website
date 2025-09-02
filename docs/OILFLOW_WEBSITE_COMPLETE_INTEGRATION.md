@@ -245,7 +245,7 @@ OilFlow_bidec_erp_website/
 
 1. **Only ERP Built for African Petroleum Trading**
    - Specialized for BDCs and independent traders
-   - Ghana banking and mobile money integration
+   - Ghana banking integration
    - Local compliance and tax handling
 
 2. **70% Reduction in Manual Work**

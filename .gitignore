@@ -23,11 +23,13 @@ yarn-debug.log*
 yarn-error.log*
 
 # Local env files
+.env
 .env*.local
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.env.demo-setup
 
 # Vercel
 .vercel
@@ -97,3 +99,4 @@ temp/
 # Windows
 nul
 desktop.ini
+/generated/prisma
