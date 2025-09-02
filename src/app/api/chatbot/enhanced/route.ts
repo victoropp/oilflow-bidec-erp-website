@@ -493,7 +493,8 @@ function generateSmartSuggestions(
       en: ["Get a custom quote", "See ROI calculator", "Schedule pricing call", "Compare packages"],
       fr: ["Obtenir un devis personnalisé", "Voir le calculateur de ROI", "Planifier un appel tarifaire", "Comparer les packages"]
     };
-    return pricingSuggestions[language] || pricingSuggestions.en;
+    const supportedLanguage = (['en', 'fr'].includes(language)) ? language as 'en' | 'fr' : 'en';
+    return pricingSuggestions[supportedLanguage] || pricingSuggestions.en;
   }
   
   return baseSuggestions.slice(0, 4); // Return top 4 suggestions
