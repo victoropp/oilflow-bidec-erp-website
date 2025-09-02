@@ -6,6 +6,12 @@ import { geoBlocking } from '@/lib/security/geoBlocking';
 
 export async function middleware(request: NextRequest) {
   const response = NextResponse.next();
+  
+  // Skip security checks in development
+  if (process.env.NODE_ENV === 'development') {
+    return response;
+  }
+  
   const clientIP = request.headers.get('x-forwarded-for') || 
                    request.headers.get('x-real-ip') || 
                    '127.0.0.1';
