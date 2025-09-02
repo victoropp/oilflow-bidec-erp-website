@@ -135,16 +135,16 @@ function generateResponse(intent: string, entities: Record<string, any>, context
   
   switch (intent) {
     case 'product_inquiry':
-      if (entities.segment) {
-        return localKnowledgeBase.productInfo[entities.segment as keyof typeof localKnowledgeBase.productInfo][lang] || 
-               localKnowledgeBase.productInfo[entities.segment as keyof typeof localKnowledgeBase.productInfo]['en'];
+      if (entities.segment && entities.segment in localKnowledgeBase.productInfo) {
+        const segmentInfo = localKnowledgeBase.productInfo[entities.segment as keyof typeof localKnowledgeBase.productInfo];
+        return (segmentInfo as any)[lang] || (segmentInfo as any)['en'];
       }
       return lang === 'fr' 
         ? "OilFlow BIDEC ERP est une solution complète qui couvre toutes les opérations pétrolières - amont, midstream et aval. Quelle partie de vos opérations vous intéresse le plus ?"
         : "OilFlow BIDEC ERP is a comprehensive solution covering all petroleum operations - upstream, midstream, and downstream. Which part of your operations interests you most?";
     
     case 'pricing_inquiry':
-      return localKnowledgeBase.pricing[lang] || localKnowledgeBase.pricing['en'];
+      return (localKnowledgeBase.pricing as any)[lang] || localKnowledgeBase.pricing['en'];
     
     case 'demo_request':
       context.leadScore += 25; // High interest
@@ -153,22 +153,22 @@ function generateResponse(intent: string, entities: Record<string, any>, context
         : "Excellent idea! A personalized demonstration is the best way to see how OilFlow BIDEC ERP can benefit your company. Can you tell me your name and company so I can arrange that?";
     
     case 'integration_inquiry':
-      return localKnowledgeBase.integration[lang] || localKnowledgeBase.integration['en'];
+      return (localKnowledgeBase.integration as any)[lang] || localKnowledgeBase.integration['en'];
     
     case 'support_inquiry':
-      return localKnowledgeBase.support[lang] || localKnowledgeBase.support['en'];
+      return (localKnowledgeBase.support as any)[lang] || localKnowledgeBase.support['en'];
     
     case 'segment_inquiry':
-      if (entities.segment && localKnowledgeBase.productInfo[entities.segment as keyof typeof localKnowledgeBase.productInfo]) {
-        return localKnowledgeBase.productInfo[entities.segment as keyof typeof localKnowledgeBase.productInfo][lang] || 
-               localKnowledgeBase.productInfo[entities.segment as keyof typeof localKnowledgeBase.productInfo]['en'];
+      if (entities.segment && entities.segment in localKnowledgeBase.productInfo) {
+        const segmentInfo = localKnowledgeBase.productInfo[entities.segment as keyof typeof localKnowledgeBase.productInfo];
+        return (segmentInfo as any)[lang] || (segmentInfo as any)['en'];
       }
       break;
   }
   
   // Default response with some personalization
   if (context.conversationHistory.length === 0) {
-    const greetings = localKnowledgeBase.greeting[lang] || localKnowledgeBase.greeting['en'];
+    const greetings = (localKnowledgeBase.greeting as any)[lang] || localKnowledgeBase.greeting['en'];
     return greetings[Math.floor(Math.random() * greetings.length)];
   }
   
