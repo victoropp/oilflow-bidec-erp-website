@@ -54,7 +54,9 @@ export async function middleware(request: NextRequest) {
       );
     }
 
-    // 3. Threat Detection
+    // 3. Threat Detection - TEMPORARILY DISABLED
+    // TODO: Re-enable after fixing false positive detection
+    /*
     const threatResult = await threatDetection.analyze({
       ip: clientIP,
       userAgent,
@@ -87,8 +89,11 @@ export async function middleware(request: NextRequest) {
         }
       );
     }
+    */
 
-    // 4. Geographic Blocking (if enabled)
+    // 4. Geographic Blocking - TEMPORARILY DISABLED
+    // TODO: Re-enable after proper configuration
+    /*
     const geoResult = await geoBlocking.check(clientIP);
     if (geoResult.blocked) {
       return new NextResponse(
@@ -104,6 +109,7 @@ export async function middleware(request: NextRequest) {
         }
       );
     }
+    */
 
     // 5. API Route Protection
     if (request.nextUrl.pathname.startsWith('/api/')) {
