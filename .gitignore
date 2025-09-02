@@ -100,3 +100,5 @@ temp/
 nul
 desktop.ini
 /generated/prisma
+
+.vercel
