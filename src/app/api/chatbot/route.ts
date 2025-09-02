@@ -47,8 +47,8 @@ const chatMessageSchema = z.object({
   }).optional(),
 });
 
-// Knowledge base for responses
-const knowledgeBase = {
+// Local knowledge base for responses
+const localKnowledgeBase = {
   greeting: {
     en: [
       "Hello! I'm Alex, your OilFlow BIDEC ERP assistant. I'm here to help you discover how our comprehensive ERP solution can transform your petroleum operations. What specific challenges are you facing in your business?",
@@ -136,15 +136,15 @@ function generateResponse(intent: string, entities: Record<string, any>, context
   switch (intent) {
     case 'product_inquiry':
       if (entities.segment) {
-        return knowledgeBase.productInfo[entities.segment as keyof typeof knowledgeBase.productInfo][lang] || 
-               knowledgeBase.productInfo[entities.segment as keyof typeof knowledgeBase.productInfo]['en'];
+        return localKnowledgeBase.productInfo[entities.segment as keyof typeof localKnowledgeBase.productInfo][lang] || 
+               localKnowledgeBase.productInfo[entities.segment as keyof typeof localKnowledgeBase.productInfo]['en'];
       }
       return lang === 'fr' 
         ? "OilFlow BIDEC ERP est une solution complète qui couvre toutes les opérations pétrolières - amont, midstream et aval. Quelle partie de vos opérations vous intéresse le plus ?"
         : "OilFlow BIDEC ERP is a comprehensive solution covering all petroleum operations - upstream, midstream, and downstream. Which part of your operations interests you most?";
     
     case 'pricing_inquiry':
-      return knowledgeBase.pricing[lang] || knowledgeBase.pricing['en'];
+      return localKnowledgeBase.pricing[lang] || localKnowledgeBase.pricing['en'];
     
     case 'demo_request':
       context.leadScore += 25; // High interest
@@ -153,22 +153,22 @@ function generateResponse(intent: string, entities: Record<string, any>, context
         : "Excellent idea! A personalized demonstration is the best way to see how OilFlow BIDEC ERP can benefit your company. Can you tell me your name and company so I can arrange that?";
     
     case 'integration_inquiry':
-      return knowledgeBase.integration[lang] || knowledgeBase.integration['en'];
+      return localKnowledgeBase.integration[lang] || localKnowledgeBase.integration['en'];
     
     case 'support_inquiry':
-      return knowledgeBase.support[lang] || knowledgeBase.support['en'];
+      return localKnowledgeBase.support[lang] || localKnowledgeBase.support['en'];
     
     case 'segment_inquiry':
-      if (entities.segment && knowledgeBase.productInfo[entities.segment as keyof typeof knowledgeBase.productInfo]) {
-        return knowledgeBase.productInfo[entities.segment as keyof typeof knowledgeBase.productInfo][lang] || 
-               knowledgeBase.productInfo[entities.segment as keyof typeof knowledgeBase.productInfo]['en'];
+      if (entities.segment && localKnowledgeBase.productInfo[entities.segment as keyof typeof localKnowledgeBase.productInfo]) {
+        return localKnowledgeBase.productInfo[entities.segment as keyof typeof localKnowledgeBase.productInfo][lang] || 
+               localKnowledgeBase.productInfo[entities.segment as keyof typeof localKnowledgeBase.productInfo]['en'];
       }
       break;
   }
   
   // Default response with some personalization
   if (context.conversationHistory.length === 0) {
-    const greetings = knowledgeBase.greeting[lang] || knowledgeBase.greeting['en'];
+    const greetings = localKnowledgeBase.greeting[lang] || localKnowledgeBase.greeting['en'];
     return greetings[Math.floor(Math.random() * greetings.length)];
   }
   
