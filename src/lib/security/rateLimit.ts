@@ -26,7 +26,7 @@ interface RateLimitStore {
 
 class RateLimitService {
   private store: RateLimitStore = {};
-  private rules: Map<string, RateLimitRule> = new Map();
+  protected rules: Map<string, RateLimitRule> = new Map();
   private cleanupInterval: NodeJS.Timeout | null = null;
 
   constructor() {

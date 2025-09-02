@@ -319,7 +319,7 @@ class IPProtectionService {
 
     // Monitor property access attempts
     const originalDefineProperty = Object.defineProperty;
-    Object.defineProperty = function(obj: any, prop: string | symbol, descriptor: PropertyDescriptor) {
+    (Object as any).defineProperty = function(obj: any, prop: string | symbol, descriptor: PropertyDescriptor) {
       if (prop.toString().includes('security') || prop.toString().includes('protection')) {
         console.warn('Suspicious property access attempt:', prop);
       }

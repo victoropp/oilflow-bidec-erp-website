@@ -25,7 +25,7 @@ export class AuthMiddleware {
       }
 
       return {
-        id: session.user.id || '',
+        id: (session.user as any).id || '',
         email: session.user.email || '',
         name: session.user.name || '',
         role: (session.user as any).role || 'user',

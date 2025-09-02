@@ -250,7 +250,10 @@ class SecurityConfigurationService {
       return '';
     }
 
-    return await securityMonitoring.recordEvent(eventData);
+    return await securityMonitoring.recordEvent({
+      ...eventData,
+      metadata: eventData.metadata || {}
+    });
   }
 
   public async logGDPREvent(eventData: {
