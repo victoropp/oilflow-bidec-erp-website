@@ -177,7 +177,7 @@ class ThreatDetectionService {
         name: 'RECONNAISSANCE',
         pattern: (request: ThreatAnalysisRequest) => {
           const reconPaths = [
-            '/admin', '/.git', '/.svn', '/backup', '/test', '/dev', 
+            '/.git', '/.svn', '/backup', '/test', '/dev', 
             '/debug', '/config', '/setup', '/install', '/wp-admin',
             '/phpmyadmin', '/adminer', '/kibana', '/grafana'
           ];
@@ -417,11 +417,11 @@ class ThreatDetectionService {
   }
 
   private calculateThreatLevel(score: number): { severity: 'low' | 'medium' | 'high' | 'critical'; blocked: boolean } {
-    if (score >= 80) {
+    if (score >= 150) {
       return { severity: 'critical', blocked: true };
-    } else if (score >= 60) {
+    } else if (score >= 120) {
       return { severity: 'high', blocked: true };
-    } else if (score >= 40) {
+    } else if (score >= 80) {
       return { severity: 'medium', blocked: false };
     } else {
       return { severity: 'low', blocked: false };

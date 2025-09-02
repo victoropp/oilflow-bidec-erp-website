@@ -7,8 +7,19 @@ import { geoBlocking } from '@/lib/security/geoBlocking';
 export async function middleware(request: NextRequest) {
   const response = NextResponse.next();
   
-  // Skip security checks in development
+  // Skip security checks in development or for static assets
   if (process.env.NODE_ENV === 'development') {
+    return response;
+  }
+  
+  // Skip security for static assets and Next.js internals
+  const path = request.nextUrl.pathname;
+  if (
+    path.startsWith('/_next') ||
+    path.startsWith('/static') ||
+    path.includes('.') || // Files with extensions
+    path === '/favicon.ico'
+  ) {
     return response;
   }
   
