@@ -370,7 +370,8 @@ function generateSuggestions(intent: string, language: string): string[] {
     }
   };
   
-  return suggestions[language]?.[intent] || suggestions['en']['general_inquiry'];
+  const langSuggestions = (suggestions as any)[language];
+  return langSuggestions?.[intent] || suggestions['en']['general_inquiry'];
 }
 
 export async function GET() {
